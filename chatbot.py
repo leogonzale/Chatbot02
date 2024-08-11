@@ -12,6 +12,8 @@ def get_api_chat_response_message(model, messages):
         messages = messages
     )
 
+	
+    print (api_response)
     # extract the response text
     response_content = api_response.choices[0].message.content
 
@@ -28,7 +30,7 @@ while True:
     if (user_input == ""):
         user_input = input("Chatbot: Hello there, I'm your helpful chatbot! Type exit to end our chat. What's your name? ")
     else:
-    user_input = input("You: ")
+        user_input = input("You: ")
     if user_input.lower() == "exit":
         break
 
